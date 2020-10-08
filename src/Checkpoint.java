@@ -3,6 +3,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Checkpoint {
@@ -14,7 +16,7 @@ public class Checkpoint {
 		 * 
 		 * Use the method provided to get an ArrayList of CarMPGEntry objects. Convert the ArrayList into a Stream.
 		 * Using streams, perform the following:
-		 * 
+		 *
 		 * 1. Print the entire list.
 		 * 
 		 * 
@@ -29,7 +31,18 @@ public class Checkpoint {
 		 * 
 		 * 5. Print only the cars with "toyota" in the name.
 		 */
+		ArrayList<CarMPGEntry> ce = readCarMPGEntryDataFromFile();
+		Stream<CarMPGEntry> str1 = ce.stream();
+		str1.forEach(y -> System.out.println(y));
+		System.out.println("Vroom");
 		
+		Stream<CarMPGEntry> str2 = ce.stream();
+		str2.forEach(y -> System.out.println(y.mpg));
+		System.out.println("vroooomm");
+		
+		Stream<CarMPGEntry> str3 = ce.stream();
+		str3.sorted().forEach(y -> System.out.println(y.carName));
+		//List<CarMPGEntry> list= str3.filter(y -> !y.carName.contains(" ")).collect(Collectors.toList());
 		
 	}
 	
