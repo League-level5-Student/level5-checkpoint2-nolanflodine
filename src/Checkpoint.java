@@ -41,8 +41,8 @@ public class Checkpoint {
 		System.out.println("vroooomm");
 		
 		Stream<CarMPGEntry> str3 = ce.stream();
-		str3.sorted().forEach(y -> System.out.println(y.carName));
-		//List<CarMPGEntry> list= str3.filter(y -> !y.carName.contains(" ")).collect(Collectors.toList());
+		//List<CarMPGEntry> list = str3.forEach(y -> y.carName).collect(Collectors.toList());
+		//List<CarMPGEntry> list= str3.forEachcollect(Collectors.toList());
 		
 	}
 	
