@@ -43,7 +43,7 @@ public class Checkpoint {
 		Stream<CarMPGEntry> str3 = ce.stream();
 		//List<CarMPGEntry> list = str3.forEach(y -> y.carName).collect(Collectors.toList());
 		//List<CarMPGEntry> list= str3.forEachcollect(Collectors.toList());
-		
+		//ugadugdug
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
