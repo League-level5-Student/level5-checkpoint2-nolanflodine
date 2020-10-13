@@ -41,7 +41,13 @@ public class Checkpoint {
 		System.out.println("vroooomm");
 		
 		Stream<CarMPGEntry> str3 = ce.stream();
-		str3.sorted((c1,c2) -> {c1.carName.compareTo(c2.carName);}).forEach(y -> System.out.println(y.carName));
+		str3.sorted((c1,c2) -> c1.carName.compareTo(c2.carName)).forEach(y -> System.out.println(y.carName));
+		
+		Stream<CarMPGEntry> str4 = ce.stream();
+		str4.filter(y -> y.cylinders!=8).forEach(y -> System.out.println(y.cylinders));
+		
+		Stream<CarMPGEntry> str5 = ce.stream();
+		str5.filter(y -> y.carName.contains("toyota")).forEach(y -> System.out.println(y.carName));
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
