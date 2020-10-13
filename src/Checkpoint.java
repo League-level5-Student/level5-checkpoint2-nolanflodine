@@ -41,9 +41,7 @@ public class Checkpoint {
 		System.out.println("vroooomm");
 		
 		Stream<CarMPGEntry> str3 = ce.stream();
-		//List<CarMPGEntry> list = str3.forEach(y -> y.carName).collect(Collectors.toList());
-		//List<CarMPGEntry> list= str3.forEachcollect(Collectors.toList());
-		//ugadugdug
+		str3.sorted((c1,c2) -> {c1.carName.compareTo(c2.carName);}).forEach(y -> System.out.println(y.carName));
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
